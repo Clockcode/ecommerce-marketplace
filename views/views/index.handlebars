@@ -1,0 +1,73 @@
+<!-- Page Content -->
+<div class="container">
+    <div class="row justify-content-around">
+        <div class="col-lg-3 col-sm-12 col-md-4">
+            <h1 class="my-4"><img src="/images/shoppin_logo.png" alt="" style="height: 10em;"> </h1>
+            <div class="list-group">
+                <a href="/" class="list-group-item categories">Best Sellers</a>
+                <a href="/register" class="list-group-item categories">New Releases</a>
+                <a href="/products" class="list-group-item categories">Electronics</a>
+                <a href="/login" class="list-group-item categories">Home</a>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid col-md-8">
+            <div class="container">
+                <h1 class="display-2">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+                    parent.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container index-products">
+        <div class="row">
+            {{#eachFrom data 3 }}
+            <div class="col">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#" style="height: 220px; position: relative">
+                            <img class="card-img-top" src="/uploads/{{this.pic}}" alt="{{this.pic}}">
+                        </a>
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                        {{#if this.best}}
+                        <span class="product-new-label"><i>Best</i></span>
+                        {{/if}}
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">{{this.title}}</a></h3>
+                        <span class="price">
+                            <h5>CA${{this.price}}</h5>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {{/eachFrom}}
+        </div>
+        {{#each categories}}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="/images/{{this.img}}.jpg" alt="{{this.img}}"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#">{{this.title}}</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.col-lg-9 -->
+
+</div>
+<!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Bootstrap core JavaScript -->
+{{!-- <script src="javascripts/vendor/jquery/jquery.min.js"></script> --}}
+{{!-- <script src="javascripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}

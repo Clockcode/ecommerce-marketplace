@@ -1,0 +1,19 @@
+{{#each errors}}
+<div class="alert alert-danger" role="alert">
+  {{this}}
+</div>
+{{/each}}
+<div class="column">
+  <div class="row justify-content-center">
+    <form class="form-signin form" action="/login" method="POST">
+      <img class="mb-4" src="images/shoppin_logo.png" alt=""height="100">
+      <h1 class="h3 mb-3 font-weight-bolder">Login</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required
+        autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+    </form>
+  </div>
+</div>
