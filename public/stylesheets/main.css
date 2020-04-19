@@ -5,9 +5,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: "Amazon Ember"; /* Margin bottom by footer height */
 }
 .footer {
+  font-family: "Amazon Ember";
   position: absolute;
   bottom: 0;
   width: 100%;
