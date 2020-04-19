@@ -1,6 +1,20 @@
-<!-- Page content -->
-
 <div class="container">
+<div class="row my-row">
+    <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Seaerch By Categories
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <a class="dropdown-item" href="/categories/electronics">Electronics</a>
+    <a class="dropdown-item" href="/categories/home">Home</a>
+    <a class="dropdown-item" href="/categories/best-sellers">Best Sellers</a>
+  </div>
+</div>
+</div>
+
+
 <div class="row mb-5">
         {{#each data}}
         <div class="col-sm-3">

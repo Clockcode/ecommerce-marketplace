@@ -1,21 +1,35 @@
 <div class="container">
-    <div class="card">
-        <div class="container-fliud">
-            <div class="preview-pic tab-content">
-                <div class="tab-pane " id="pic-1"><img src="/uploads/{{data.pic}}" /></div>
+    <div class="row product-row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-10">
+            <div class="col-md-4 col-sm-12 product-pic">
+                <img class="img-fluid" src="/uploads/{{data.pic}}" />
+            </div>
+            <div class="col-md-8 text-right details">
+                <h3 class="product-title">{{data.title}}</h3>
+                <div class="list-group">
+                    <div class="list-group-item">
+
+                    <p class="product-description ">Description</p>
+                    <p>{{data.description}}</p>
+                    </div>
+                    <div class="list-group-item">
+
+                    <p class="product-category ">Category</p>
+                    {{data.category}}
+                    </div>
+                    <div class="list-group-item">
+                        <p>Quantity</p>
+                        <span>{{data.quantity}}</span>
+                    </div>
+                    <div class="list-group-item">
+
+                    <h4 class="price ">current price: <span>CA${{data.price}}</span></h4>
+                    </div>
+                </div>
+                <div class="action">
+                    <button class="add-to-cart btn btn-success" type="button">add to cart</button>
+                </div>
             </div>
         </div>
-        <div class="details col-md-6">
-            <h3 class="product-title">{{data.title}}</h3>
-        </div>
-        <p class="product-description">{{data.description}}</p>
-        <h4 class="price">current price: <span>CA${{data.price}}</span></h4>
-        <div class="action">
-            <button class="add-to-cart btn btn-success" type="button">add to cart</button>
-            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-        </div>
     </div>
-</div>
-</div>
-</div>
 </div>

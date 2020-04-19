@@ -55,7 +55,66 @@ router.get("/register", (req, res) => {
 router.get("/login", (req, res) => {
   res.render("login");
 });
-
+router.get("/categories/best-sellers", (req, res) => {
+  productModel
+    .find({ best: true })
+    .then((products) => {
+      const productData = products.map((product) => {
+        return {
+          _id: product._id,
+          title: product.title,
+          price: product.price,
+          pic: product.pic,
+          category: product.category,
+          best: product.best,
+        };
+      });
+      res.render("products", { data: productData });
+    })
+    .catch((err) => {
+      console.log(`Error Occured: ${err}`);
+    });
+});
+router.get("/categories/electronics", (req, res) => {
+  productModel
+    .find({ category: "electronics" })
+    .then((products) => {
+      const productData = products.map((product) => {
+        return {
+          _id: product._id,
+          title: product.title,
+          price: product.price,
+          pic: product.pic,
+          category: product.category,
+          best: product.best,
+        };
+      });
+      res.render("products", { data: productData });
+    })
+    .catch((err) => {
+      console.log(`Error Occured: ${err}`);
+    });
+});
+router.get("/categories/home", (req, res) => {
+  productModel
+    .find({ category: "home" })
+    .then((products) => {
+      const productData = products.map((product) => {
+        return {
+          _id: product._id,
+          title: product.title,
+          price: product.price,
+          pic: product.pic,
+          category: product.category,
+          best: product.best,
+        };
+      });
+      res.render("products", { data: productData });
+    })
+    .catch((err) => {
+      console.log(`Error Occured: ${err}`);
+    });
+});
 router.get("/products", (req, res) => {
   productModel
     .find()
@@ -86,6 +145,7 @@ router.get("/product-page/:id", (req, res) => {
         id: product.id,
         title: product.title,
         price: product.price,
+        description: product.description,
         pic: product.pic,
         category: product.category,
         best: product.best,
