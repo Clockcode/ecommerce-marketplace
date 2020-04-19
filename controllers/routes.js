@@ -323,7 +323,7 @@ router.post("/add", (req, res) => {
             }
           )
           .then(() => {
-            res.redirect(`/login`);
+            res.redirect(`/profile`);
           });
       });
     })
