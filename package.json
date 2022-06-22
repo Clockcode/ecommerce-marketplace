@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^6.5.3",
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "bcryptjs": "^2.4.3",
     "connect-mongo": "^3.2.0",
     "core-util-is": "^1.0.2",
